@@ -1,9 +1,19 @@
 import React from 'react';
 
-const Goods = () => {
+const Goods = (props) => {
 	return (
-		<>
-		</>
+		<div className="goods-block">
+			<img src={props.image} alt="goods"/>
+			<p>
+				{props.title}
+			</p>
+			<p>
+				{props.cost}
+			</p>
+			<button className="add-to-cart" data-key={props.articul}>
+				Add to cart
+			</button>
+		</div>
 	)
 }
 
